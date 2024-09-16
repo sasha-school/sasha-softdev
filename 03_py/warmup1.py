@@ -40,3 +40,13 @@ def not_string(str):
 
 def missing_char(str, n):
   return str[:n] + str[1+n:]
+
+def front_back(str):
+  if len(str)<=1:
+    return str
+  if len(str)==2:
+    return str[1]+str[0]
+  return str[len(str)-1]+str[1:len(str)-1]+str[0]
+
+def front3(str):
+  return(str[:3]*3)

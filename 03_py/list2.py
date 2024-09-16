@@ -21,3 +21,27 @@ def sum13(nums):
       sum+=nums[index1]
       index1+=1
   return sum
+
+def sum67(nums):
+  sum =0
+  six = False
+  for item in nums:
+    if (item==6):
+      six = True
+    elif (item==7):
+      if (six==True):
+        six = False
+      else:
+        sum+=7
+    else:
+      if (six==False):
+        sum+=item
+  return sum
+
+def has22(nums):
+  i =0
+  while i<(len(nums)-1):
+    if nums[i]==2 and nums[i+1]==2:
+      return True
+    i+=1
+  return False
