@@ -23,8 +23,15 @@ with open('occupations.csv') as text:
         else:
             reader[row+1] = reader[row+1].split(',')
         occupations[reader[row+1][0]]=float(reader[row+1][1])
-    pprint.pp(occupations)
+    #pprint.pp(occupations)
+
+def generateRandom():
     generated = random.random()*99.8
     for key in occupations.keys():
-        
+        if (generated<0):
+            return(str(key)+', ' +str(occupations[key]))
+        else:
+            generated-=occupations[key]
+    return("error")
+print(generateRandom()) 
     
