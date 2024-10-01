@@ -4,8 +4,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello_world():
-    return "HOMEPAGE nav to /wdywtbwygp"
+def homepage():
+    return "<a href='http://127.0.0.1:5000/wdywtbwygp'>link to jobs</a>"
+
 
 @app.route("/wdywtbwygp") 
 def occupations():
@@ -25,11 +26,14 @@ def occupations():
                 occupation = row[0].strip()
                 percentage = float(row[1].strip())
                 occupations[occupation] = percentage
+    
+    input_table = [(k, v) for k, v in occupations.items()]
+    input_table.insert(0,['Job Class','Percentage'])
     del occupations['Total']
     occupation_list = list(occupations.keys())
     weights = list(occupations.values())
     selected_occupation = random.choices(occupation_list, weights=weights, k=1)
-    return render_template('tablified.html', randomly_selected=selected_occupation[0])
+    return render_template('tablified.html', randomly_selected=selected_occupation[0], items=input_table)
 
 if __name__ == "__main__":
     app.debug = True
