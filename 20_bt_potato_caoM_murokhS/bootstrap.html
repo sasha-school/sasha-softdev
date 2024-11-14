@@ -1,14 +1,12 @@
 <!doctype html>
 <html lang="en">
-<style>
 
-  .carousel-inner{
-    carousel-control-width:15%;
-  }
-
-  </style>
 
   <head>
+
+    <style>
+
+      </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,16 +21,22 @@
 
     <!-- spinner -->
     <p><a href="https://getbootstrap.com/docs/5.3/components/spinner/">link to spinner - bootstrap docs</a></p>
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
+    <p style="text-align: center;">loading... </p>
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
     </div>
 
   </br></br></br>
 
     <!-- progress bar -->
     <p><a href="https://getbootstrap.com/docs/5.3/components/dropdown/">link to progress bar - bootstrap docs</a></p>
-    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+    <p style="text-align: center;">loading...</p>
+    <div class="d-flex justify-content-center">
+      <div class="progress w-25" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 75%"></div>
+      </div>
     </div>
 
   </br></br></br>
@@ -77,6 +81,48 @@
     </div>
 
 
+</br></br></br>
+
+    <!-- text accordion -->
+    <p><a href="https://getbootstrap.com/docs/5.3/components/accordion/">link to text accordion - bootstrap docs</a></p>
+    <div class="accordion w-50" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the first item's accordion body.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the second item's accordion body.</strong>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <strong>This is the third item's accordion body.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 </body>
