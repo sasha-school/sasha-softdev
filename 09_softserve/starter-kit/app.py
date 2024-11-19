@@ -3,6 +3,8 @@ from flask import Flask
 app = Flask(__name__)                 
 
 @app.route("/")
+def main():         
+    return generateRandom()
 
 def generateRandom():
     occupations = {}
@@ -24,8 +26,7 @@ def generateRandom():
             generated-=occupations[key]
     return("error")
 
-def main():         
-    return generateRandom()
+
 
 app.debug = True
 app.run()

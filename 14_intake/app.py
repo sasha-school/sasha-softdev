@@ -50,8 +50,8 @@ def disp_loginpage():
     print(request.args)
 #     print("***DIAG: request.args['username']  ***")
 #     print(request.args['username'])
-#     print("***DIAG: request.headers ***")
-#     print(request.headers)
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     return render_template( 'login.html' )
 
 
@@ -66,8 +66,8 @@ def authenticate():
     print(request.args)
 #     print("***DIAG: request.args['username']  ***")
 #     print(request.args['username'])
-#     print("***DIAG: request.headers ***")
-#     print(request.headers)
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission
 
 

@@ -35,14 +35,12 @@ def authenticate():
     print("***DIAG: request.headers ***")
     print(request.headers)
     method1 = request.method
-    if request.method == 'POST':
+    if method1 == 'POST':
         username = request.form['username']
-        requesttype = "POST"
     else:
         username = request.args.get('username')
-        requesttype = "GET"
     
-    return render_template( 'response.html', username=username, request = requesttype )  #response to a form submission
+    return render_template( 'response.html', username=username, request = method1 )  #response to a form submission
 
 
     
