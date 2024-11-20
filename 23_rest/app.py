@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    data = urllib.request.urlopen('https://api.nasa.gov/planetary/apod?api_key=GfPzg9QpYqRT8NdZvAH31A8q4k1gDwSrf4GooB3q')
+    with open("key_nasa.txt", "r") as file:
+        key = file.read()
+    data = urllib.request.urlopen(f'https://api.nasa.gov/planetary/apod?api_key={key}')
     d = json.loads(data.read())
     return render_template('main.html', explanation = d["explanation"], imagehd = d["hdurl"], image = d["url"])
 
